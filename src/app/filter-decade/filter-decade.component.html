@@ -1,0 +1,7 @@
+<div class='toolbar'>
+    <div class='button-wrapper'>
+        <button *ngFor="let decade of decades; index as i;" attr.aria-pressed="{{ i === 0}}">
+            {{ decade }}’s
+        </button>
+    </div>
+</div>

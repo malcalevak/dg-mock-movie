@@ -1,0 +1,23 @@
+<article *ngFor="let movie of movies; index as i;" class="card" attr.aria-labelledby="card-{{i}}">
+    <div>
+        <img class="image" alt="{{ movie.Title }} Poster" src="/assets/images/{{ movie.imdbID }}.jpg">
+    </div>
+    <div class="info">
+        <h2 class="title" id="card-{{i}}">
+            {{ movie.Title }}
+        </h2>
+        <p class="rating">
+            {{ movie.Rated }}
+        </p>
+        <p class="runtime">
+            {{ movie.Runtime }}
+        </p>
+        <time class="released" attr.datetime="{{ movie.Released }}">
+            {{ movie.Released | date:'d LLL yyyy' }}
+        </time>
+        <p class="plot">
+            {{ movie.Plot }}
+        </p>
+        <a class="link" href="https://www.imdb.com/title/{{ movie.imdbID }}">View on IMDB</a>
+    </div>
+</article>

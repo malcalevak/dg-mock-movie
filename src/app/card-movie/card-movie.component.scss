@@ -1,0 +1,87 @@
+// TODO Create Variables
+
+.card {
+    background-color: #E8EBEE;
+    border: 2px solid #303436;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #303436;
+    display: flex;
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 16px;
+}
+
+.image {
+    border-radius: 8px;
+    min-width: 140px;
+}
+
+.info {
+    margin-left: 24px;
+    padding-bottom: 40px; // ensure the hyperlink always has space
+    position: relative;
+}
+
+.title {
+    border-bottom: 1px solid #8D989E;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    padding: 0 0 2px;
+}
+
+.rating {
+    border: 1px solid #8D989D;
+    border-radius: 4px;
+    color: #8D989D;
+    display: inline-block;
+    font-family: "Courier";
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px 7px 0;
+}
+
+.runtime {
+    display: inline-block;
+    font-family: 'Arial';
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 0 16px;
+}
+
+.released {
+    font-family: 'Helvetica';
+    float: right;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 3px; //float fix
+}
+
+.plot {
+    font-family: 'Helvetica';
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.link {
+    background-color: #F9B44A;
+    border-radius: 4px;
+    bottom: 0;
+    color: #fff;
+    display:  inline-block;
+    font-family: "Helvetica";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 10px 25px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+
+    &:focus, &:hover {
+        text-decoration: underline;
+    };
+}
