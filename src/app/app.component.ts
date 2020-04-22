@@ -23,27 +23,16 @@ export class AppComponent implements OnInit {
     const decadeRegEx = /(\d\d\d)(\d)/gm;
     const decadeReplace = `$10`;
     const moviesObservable$ = this.movieService.getMovies();
-    moviesObservable$.subscribe((movies2: Observable<Movie>[]) => {
+    moviesObservable$.subscribe((moviesObservable: Observable<Movie>[]) => {
       // console.log(movies2);
-      movies2.forEach(movie => {
+      moviesObservable.map(movie => {
         movie.subscribe((data: Movie) => {
           this.movies.push(data);
           decadeSet.add(data.Year.toString().replace(decadeRegEx, decadeReplace));
           // how do we properly delay sorting until all are processed?
           this.decades = Array.from(decadeSet).sort().reverse();
-//          console.log(this.decades);
-          console.log(this.movies);
-});
-//        this.decades = Array.from(decadeSet).sort().reverse();
+        });
       });
-//      this.decades = Array.from(decadeSet).sort().reverse();
-//      console.log(this.movies);
-//      console.log(this.decades);
     });
-/*
-    this.movieService.getMovie('tt0372784').subscribe((data: Movie) => {
-      console.log(data);
-    });
-*/
   }
 }

@@ -10,6 +10,7 @@ export class Movie {
         public Released: string,
         public Runtime: string,
         public Plot: string,
+        public Decade: string
     ) {}
 }
 
@@ -19,6 +20,9 @@ export class Movie {
 
 export class MovieAdapter implements Adapter<Movie> {
     adapt(item: any): Movie {
-        return new Movie(item.imdbID, item.Title, item.Year, item.Rated, new Date(item.Released).toISOString(), item.Runtime, item.Plot);
+        const regex = /(\d{3})\d/gm;
+        const subst = `$10`;
+        return new Movie(item.imdbID, item.Title, item.Year, item.Rated,
+            new Date(item.Released).toISOString(), item.Runtime, item.Plot, item.Year.replace(regex, subst));
     }
 }

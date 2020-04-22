@@ -1,6 +1,6 @@
 <div class='toolbar'>
     <div class='button-wrapper'>
-        <button *ngFor="let decade of decades; index as i;" attr.aria-pressed="{{ i === 0}}">
+        <button *ngFor="let decade of decades; index as i;" attr.aria-pressed="{{ i === 0}}" (click)="changeDecade($event,decade)">
             {{ decade }}’s
         </button>
     </div>

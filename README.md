@@ -1,7 +1,9 @@
 # TODOs:
-* Revert tsconfig.json es5 to es2015, for production?
-* Analyze proper handling of observable responses
 * Implement actual filtering by decade
+* Analyze proper handling of observable responses
+* Revert tsconfig.json es5 to es2015, for production?
+* Create SASS variables
+* Refactor how we show/hide to avoid hidden class, remove need for decade on movie model
 
 # Notes:
 

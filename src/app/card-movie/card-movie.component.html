@@ -1,4 +1,4 @@
-<article *ngFor="let movie of movies; index as i;" class="card" attr.aria-labelledby="card-{{i}}">
+<article *ngFor="let movie of movies; index as i;" class="card" attr.aria-labelledby="card-{{i}}" class="decade{{ movie.Decade }}" hidden>
     <div>
         <img class="image" alt="{{ movie.Title }} Poster" src="/assets/images/{{ movie.imdbID }}.jpg">
     </div>
@@ -13,7 +13,7 @@
             {{ movie.Runtime }}
         </p>
         <time class="released" attr.datetime="{{ movie.Released }}">
-            {{ movie.Released | date:'d LLL yyyy' }}
+            {{ movie.Released | date: 'd LLL yyyy' }}
         </time>
         <p class="plot">
             {{ movie.Plot }}
