@@ -1,4 +1,4 @@
-// TODO Create Variables, refactor how we show/hide to avoid hidden class
+// TODO Create Variables
 
 .card {
     background-color: #E8EBEE;
@@ -10,9 +10,6 @@
     margin: 40px auto;
     max-width: 700px;
     padding: 16px;
-    &.hidden {
-        display: none;
-    }
 }
 
 .image {

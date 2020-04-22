@@ -10,6 +10,6 @@ import { Movie } from '../movie.model';
 export class CardMovieComponent {
 
   @Input() movies: Movie[];
-  @Input() currentDecade: string;
+  @Input() currentDecade: number;
 
 }

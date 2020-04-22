@@ -11,8 +11,8 @@ import { Observable } from 'rxjs';
 
 export class AppComponent implements OnInit {
   movies: Movie[] = Array();
-  decades: string[];
-  currentDecade: string;
+  decades: number[];
+  currentDecade: number;
   moviesObservable$: Observable<Movie[]>;
 
 
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
-    const decadeSet = new Set<string>();
+    const decadeSet = new Set<number>();
     const decadeRegEx = /(\d{3})(\d)/gm;
     const decadeReplace = `$10`;
     const moviesObservable$ = this.movieService.getMovies();
@@ -28,10 +28,10 @@ export class AppComponent implements OnInit {
       moviesObservable.map(movie => {
         movie.subscribe((data: Movie) => {
           this.movies.push(data);
-          decadeSet.add(data.Year.toString().replace(decadeRegEx, decadeReplace));
+          decadeSet.add(+data.Year.toString().replace(decadeRegEx, decadeReplace));
           // how do we properly delay sorting until all are processed?
           this.decades = Array.from(decadeSet).sort().reverse();
-          this.currentDecade = this.decades[0];
+          this.currentDecade = +this.decades[0];
         });
       });
     });
