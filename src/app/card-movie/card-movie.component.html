@@ -1,4 +1,4 @@
-<article *ngFor="let movie of movies; index as i;" class="card" attr.aria-labelledby="card-{{i}}" class="decade{{ movie.Decade }}" hidden>
+<article *ngFor="let movie of movies; index as i;" class="card decade{{ movie.Decade }} {{ currentDecade !== movie.Decade? 'hidden':'' }}" attr.aria-labelledby="card-{{i}}">
     <div>
         <img class="image" alt="{{ movie.Title }} Poster" src="/assets/images/{{ movie.imdbID }}.jpg">
     </div>
