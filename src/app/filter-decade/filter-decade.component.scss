@@ -1,3 +1,5 @@
+@import "_variables";
+
 .toolbar {
     margin: 0 auto 40px;
     max-width: 700px;
@@ -5,16 +7,16 @@
 }
 
 .button-wrapper {
-    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+    box-shadow: 0px 2px 4px $shadow;
     display: inline-block;
 }
 
 button {
     background-color: #F7F8F9;
     border: solid 1px transparent;
-    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+    box-shadow: 0px 2px 4px $shadow;
     color: #61696e;
-    font-family: "Open Sans";
+    font-family: $fontPrimary;
     font-size: 14px;
     font-weight: 600;
     line-height: 19px;
@@ -29,8 +31,8 @@ button {
     &[aria-pressed="true"] {
         background-color: #1A72B0;
         border-color: transparent;
-        box-shadow: 0px 2px 4px rgba(100,100,100,0.5),
+        box-shadow: 0px 2px 4px $shadow,
                     inset 0px 1px 3px rgba(0,0,0,0.2);
-        color: #fff;
+        color: $fontLight;
     }
 }

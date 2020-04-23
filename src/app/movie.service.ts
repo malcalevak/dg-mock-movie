@@ -37,7 +37,4 @@ export class MovieService {
     );
   }
 
-  public getDecades(years) {
-    return false;
-  }
 }

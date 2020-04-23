@@ -1,11 +1,11 @@
-// TODO Create Variables
+@import "_variables";
 
 .card {
     background-color: #E8EBEE;
-    border: 2px solid #303436;
+    border: 2px solid $fontDark;
     border-radius: 8px;
     box-sizing: border-box;
-    color: #303436;
+    color: $fontDark;
     display: flex;
     margin: 40px auto;
     max-width: 700px;
@@ -25,7 +25,7 @@
 
 .title {
     border-bottom: 1px solid #8D989E;
-    font-family: "Open Sans";
+    font-family: $fontPrimary;
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 5px;
@@ -33,9 +33,9 @@
 }
 
 .rating {
-    border: 1px solid #8D989D;
+    border: 1px solid $fontDark2;
     border-radius: 4px;
-    color: #8D989D;
+    color: $fontDark2;
     display: inline-block;
     font-family: "Courier";
     font-size: 14px;
@@ -53,7 +53,7 @@
 }
 
 .released {
-    font-family: 'Helvetica';
+    font-family: $fontSecondary;
     float: right;
     font-size: 14px;
     line-height: 18px;
@@ -61,7 +61,7 @@
 }
 
 .plot {
-    font-family: 'Helvetica';
+    font-family: $fontSecondary;
     font-size: 16px;
     line-height: 21px;
 }
@@ -70,9 +70,9 @@
     background-color: #F9B44A;
     border-radius: 4px;
     bottom: 0;
-    color: #fff;
+    color: $fontLight;
     display:  inline-block;
-    font-family: "Helvetica";
+    font-family: $fontSecondary;
     font-size: 16px;
     font-weight: bold;
     line-height: 21px;
